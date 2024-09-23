@@ -3,7 +3,7 @@ import pandas as pd
 
 def calculate_demographic_data(print_data=True):
     # Read data from file
-    df = pd.read_csv('./adult.data.csv')
+    df = pd.read_csv('adult.data.csv')
 
     # How many of each race are represented in this dataset? This should be a Pandas series with race names as the index labels.
     race_count = pd.Series([df[df['race'] == 'White']['race'].count(), df[df['race'] == 'Black']['race'].count(), df[df['race'] == 'Asian-Pac-Islander']['race'].count(), df[df['race'] == 'Amer-Indian-Eskimo']['race'].count(), df[df['race'] == 'Other']['race'].count()], index=['White', 'Black', 'Asian-Pac-Islander', 'Amer-Indian-Eskimo', 'Other'])
